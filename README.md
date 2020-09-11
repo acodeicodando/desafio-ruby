@@ -75,3 +75,18 @@ Estrutura - Produto
 
 
 ** Aí você publica essa aplicação em algum lugar (heroku, que seja) e nos envia o link do github pra vermos seu código. Damos um prazo normalmente de 4 dias, e você entrega o que vc conseguir até lá. Blz?
+
+
+## Development enviroment
+
+* First you need to have a **mongodb** (try with homebrew) in your enviroment
+
+* For this project the **version** of rails is **2.5.5** and is a tip use **rvm** have control of gems and version of your ruby
+
+* This api product collector runs over the stores: Timex, Fossil, Schumann. So exists a scheduler that run every 30 minutes collecting new products for the stores
+
+## Staging enviroment
+
+* For the staging enviroment this application use the **heroku.com**
+
+* URL to access `https://fulllabs2commit.heroku.com`

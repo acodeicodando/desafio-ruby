@@ -45,3 +45,4 @@ gem 'mongoid', '~> 7.0.5'
 gem 'kaminari-mongoid'
 gem 'devise'
 gem 'rails_admin', '~> 2.0'
+gem 'whenever', require: false
