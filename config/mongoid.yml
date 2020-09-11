@@ -155,4 +155,4 @@ development:
 production:
   clients:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      uri: <%= ENV['MONGODB_URI'] %>
