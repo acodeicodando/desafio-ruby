@@ -1,2 +1,40 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<main class="main-content">
+  <div class="nav-options">
+    <form class="filters">
+      <fieldset class="filters__search">
+        <div class="filters__items">
+          <legend>Busca</legend>
+          <div class="filters__item">
+            <label class="hide-visually" for="busca">Busca</label>
+            <input type="search" id="busca">
+          </div>
+          <div class="filters__item">
+            <button type="button" class="button-submit">Buscar</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <div>
+      <label for="ordenar-por"></label>
+      <select name="" id="ordenar-por">
+        <option value="">Ordenar por</option>
+      </select>
+    </div>
+  </div>
+  <section>
+    <ul class="products-list">
+      <% @products.each do |product| %>
+      <li class="products-list__item">
+        <span class="tag-off">Off</span>
+        <%= image_tag product.image, alt: product.name %>
+        <h3 class="products-list__title"><%=product.name %></h3>
+        <div class="products-list__price">
+          <s><%=product.last_payment.value%></s>
+          <strong><%=product.last_payment.list_value%></strong>
+        </div>
+        <span class="products-list__installments"><%=product.last_payment.installment_value%></span>
+      </li>
+      <% end %>
+    </ul>
+  </section>
+</main>

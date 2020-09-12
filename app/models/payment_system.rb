@@ -7,4 +7,8 @@ class PaymentSystem
   belongs_to :product
 
   validates :number_of_installments, :value, :list_value, numericality: { greater_than_or_equal_to: 0 }
+
+  def installment_value
+    list_value.to_f / number_of_installments.to_i
+  end
 end

@@ -85,6 +85,14 @@ Estrutura - Produto
 
 * This api product collector runs over the stores: Timex, Fossil, Schumann. So exists a scheduler that run every 30 minutes collecting new products for the stores
 
+* Populate the database with the command bellow
+
+```
+rake fossil:collect_products
+rake schumann:collect_products
+rake timex:collect_products
+```
+
 ## Staging enviroment
 
 * For the staging enviroment this application use the **heroku.com**

@@ -5,6 +5,8 @@ class Product
   field :url, type: String
   belongs_to :store
   has_many :payment_systems, autosave: true
+  has_one :last_payment,
+    class_name: 'PaymentSystem', foreign_key: :product_id
 
   validates :name, :image, :url, :store, presence: true
 end
