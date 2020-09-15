@@ -32,5 +32,8 @@ module Fulllabs2commit
     # Don't generate system test files.
     config.generators.system_tests = nil
     config.i18n.default_locale = :'pt-BR'
+
+    config.autoload_paths += %W(#{config.root}/lib)
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
   end
 end
