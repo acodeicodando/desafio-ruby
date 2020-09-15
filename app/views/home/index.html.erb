@@ -1,25 +1,19 @@
 <main class="main-content">
   <div class="nav-options">
-    <form class="filters">
-      <fieldset class="filters__search">
-        <div class="filters__items">
-          <legend>Busca</legend>
-          <div class="filters__item">
-            <label class="hide-visually" for="busca">Busca</label>
-            <input type="search" id="busca">
-          </div>
-          <div class="filters__item">
-            <button type="button" class="button-submit">Buscar</button>
-          </div>
+    <%= form_tag root_path, method: :get, class: 'filters' do %>
+    <fieldset class="filters__search">
+      <div class="filters__items">
+        <legend>Busca</legend>
+        <div class="filters__item">
+          <label class="hide-visually" for="busca">Busca</label>
+          <input type="search" id="busca" name="q">
         </div>
-      </fieldset>
-    </form>
-    <div>
-      <label for="ordenar-por"></label>
-      <select name="" id="ordenar-por">
-        <option value="">Ordenar por</option>
-      </select>
-    </div>
+        <div class="filters__item">
+          <button type="submit" class="button-submit">Buscar</button>
+        </div>
+      </div>
+    </fieldset>
+    <% end %>
   </div>
   <section>
     <ul class="products-list">
@@ -30,12 +24,15 @@
         <h3 class="products-list__title"><%=product.name %></h3>
         <div class="products-list__price">
           <s><%=number_to_currency product.last_payment.value%></s>
-          <strong><%=number_to_currency product.last_payment.list_value%></strong>
+          <strong><%=product.last_payment.number_of_installments%> x
+            <%=number_to_currency product.last_payment.installment_value%></strong>
         </div>
-        <span class="products-list__installments"><%=product.last_payment.number_of_installments%> x
-          <%=number_to_currency product.last_payment.installment_value%></span>
+        <span class="products-list__installments"><%= product.store.name %></span>
       </li>
       <% end %>
     </ul>
+  </section>
+  <section>
+    <%= will_paginate @products %>
   </section>
 </main>

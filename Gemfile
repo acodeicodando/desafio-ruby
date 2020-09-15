@@ -48,8 +48,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Custom gems
 gem 'mongoid', '~> 7.0.5'
-gem 'kaminari-mongoid'
 gem 'devise'
 gem 'rails_admin', '~> 2.0'
 gem 'whenever', require: false
 gem 'faraday'
+gem 'searchkick'
+gem 'will_paginate'

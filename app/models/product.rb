@@ -2,6 +2,7 @@ class Product
   include Mongoid::Document
   include Mongoid::Timestamps::Created::Short
   include Mongoid::Timestamps::Updated::Short
+  searchkick
 
   field :name, type: String
   field :image, type: String
@@ -15,4 +16,6 @@ class Product
   def last_payment
     payment_systems.order_by(created_at: :desc).first
   end
+
+  
 end
