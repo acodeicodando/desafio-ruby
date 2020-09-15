@@ -9,8 +9,10 @@ class Product
   
   belongs_to :store
   has_many :payment_systems, autosave: true
-  has_one :last_payment,
-    class_name: 'PaymentSystem', foreign_key: :product_id
 
   validates :name, :image, :url, :store, presence: true
+
+  def last_payment
+    payment_systems.order_by(created_at: :desc).first
+  end
 end

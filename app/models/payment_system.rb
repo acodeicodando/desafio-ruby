@@ -1,5 +1,7 @@
 class PaymentSystem
   include Mongoid::Document
+  include Mongoid::Timestamps::Created::Short
+  include Mongoid::Timestamps::Updated::Short
   field :value, type: Float
   field :list_value, type: Float
   field :number_of_installments, type: Integer

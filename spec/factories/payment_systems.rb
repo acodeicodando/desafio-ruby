@@ -4,7 +4,7 @@ FactoryBot.define do
     product
     value                   { 99.99 }
     list_value              { 99.99 }
-    number_of_installments  { 12 }
-    payment_system_name     { '12x sem juros' }
+    number_of_installments  { 10 }
+    payment_system_name     { '10x sem juros' }
   end
 end

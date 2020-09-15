@@ -29,10 +29,11 @@
         <%= image_tag product.image, alt: product.name %>
         <h3 class="products-list__title"><%=product.name %></h3>
         <div class="products-list__price">
-          <s><%=product.last_payment.value%></s>
-          <strong><%=product.last_payment.list_value%></strong>
+          <s><%=number_to_currency product.last_payment.value%></s>
+          <strong><%=number_to_currency product.last_payment.list_value%></strong>
         </div>
-        <span class="products-list__installments"><%=product.last_payment.installment_value%></span>
+        <span class="products-list__installments"><%=product.last_payment.number_of_installments%> x
+          <%=number_to_currency product.last_payment.installment_value%></span>
       </li>
       <% end %>
     </ul>
