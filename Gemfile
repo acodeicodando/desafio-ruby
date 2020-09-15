@@ -54,3 +54,4 @@ gem 'whenever', require: false
 gem 'faraday'
 gem 'searchkick'
 gem 'will_paginate'
+gem 'kaminari-mongoid'
