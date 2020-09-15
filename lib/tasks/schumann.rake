@@ -1,6 +1,6 @@
 namespace :schumann do
   desc 'Collect Products'
-  task :collect_products => :enviroment do
+  task :collect_products => :environment do
     store = Store.where(name: 'Schumann').first
     unless store.nil?
       begin

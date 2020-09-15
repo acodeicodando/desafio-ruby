@@ -77,9 +77,9 @@ Estrutura - Produto
 ** Aí você publica essa aplicação em algum lugar (heroku, que seja) e nos envia o link do github pra vermos seu código. Damos um prazo normalmente de 4 dias, e você entrega o que vc conseguir até lá. Blz?
 
 
-## Development enviroment
+## Development environment
 
-* First you need to have a **mongodb** (try with homebrew) in your enviroment
+* First you need to have a **mongodb** (try with homebrew) in your environment
 
 * For this project the **version** of rails is **2.5.5** and is a tip use **rvm** have control of gems and version of your ruby
 
@@ -93,8 +93,8 @@ rake schumann:collect_products
 rake timex:collect_products
 ```
 
-## Staging enviroment
+## Staging environment
 
-* For the staging enviroment this application use the **heroku.com**
+* For the staging environment this application use the **heroku.com**
 
 * URL to access `https://fulllabs2commit.heroku.com`

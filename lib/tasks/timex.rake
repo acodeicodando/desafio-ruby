@@ -1,6 +1,6 @@
 namespace :timex do
   desc 'Collect Products'
-  task :collect_products => :enviroment do
+  task :collect_products => :environment do
     store = Store.where(name: 'Timex').first
     unless store.nil?
       begin
